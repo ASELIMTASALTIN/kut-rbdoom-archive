@@ -13,11 +13,14 @@ modern foundation: DX12/Vulkan through NVRHI, PBR shading, baked GI and TrenchBr
 
 ## Roadmap
 
+The full plan, with budgets and phases, is in [docs/KUT-ID5-PLAN.md](docs/KUT-ID5-PLAN.md).
+Every feature must scale down to PS3/360-era budgets (`kut_profile ps3`); the engine itself targets PC.
+
 1. **Virtual texturing**: feedback pass, page cache, async page streaming, runtime BC transcoding
-2. **Unique-texture workflow**: painting and baking tools for per-surface texels
+2. **VT build tools** and a **unique-texture workflow**: per-surface texels, stamping and decal baking
 3. **Baked lighting** stored in the virtual texture, alongside dynamic lights
-4. **Adaptive resolution** to hold a target frame rate
-5. **Async streaming** of levels and assets
+4. **Async streaming** of levels and assets within a bandwidth budget
+5. **Adaptive resolution**: inherited from BFG (`rs_enable`), to be verified and tuned on Vulkan
 
 ## Building
 
