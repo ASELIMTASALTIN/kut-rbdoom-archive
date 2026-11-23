@@ -44,3 +44,20 @@ neo/.vscode/
 neo/cmake-build-*/
 neo/bin/
 /tools/
+
+# --- Kut Engine: never commit commercial game data or captures ---
+*.pages
+*.streamed
+*.bimage
+*.bmd6model
+*.bmodel
+*.idxma
+*.index
+*.rdc
+*.wpix
+*.etl
+*.ncu-rep
+*.nsight-gfxproj
+WolfNewOrder*
+extracted/
+captures/
