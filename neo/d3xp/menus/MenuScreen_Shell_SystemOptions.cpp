@@ -4,6 +4,7 @@
 Doom 3 BFG Edition GPL Source Code
 Copyright (C) 1993-2012 id Software LLC, a ZeniMax Media company.
 Copyright (C) 2014-2023 Robert Beckebans
+Modified 2026 for Kut Engine: render API toggle disabled in Vulkan-only builds.
 
 This file is part of the Doom 3 BFG Edition GPL Source Code ("Doom 3 BFG Edition Source Code").
 
@@ -545,7 +546,7 @@ void idMenuScreen_Shell_SystemOptions::idMenuDataSource_SystemSettings::AdjustFi
 {
 	switch( fieldIndex )
 	{
-#ifdef _WIN32
+#if defined( _WIN32 ) && USE_DX12
 		case SYSTEM_FIELD_RENDERAPI:
 		{
 			static const int numValues = 2;

@@ -6,6 +6,7 @@ Copyright (C) 1993-2012 id Software LLC, a ZeniMax Media company.
 Copyright (C) 2014-2024 Robert Beckebans
 Copyright (C) 2014-2016 Kot in Action Creative Artel
 Copyright (C) 2022 Stephen Pridham
+Modified 2026 for Kut Engine: Vulkan-only builds (r_graphicsAPI locked to vulkan without DX12).
 
 This file is part of the Doom 3 BFG Edition GPL Source Code ("Doom 3 BFG Edition Source Code").
 
@@ -70,7 +71,7 @@ glconfig_t	glConfig;
 idCVar r_requestStereoPixelFormat( "r_requestStereoPixelFormat", "1", CVAR_RENDERER, "Ask for a stereo GL pixel format on startup" );
 idCVar r_debugContext( "r_debugContext", "0", CVAR_RENDERER, "Enable various levels of context debug." );
 
-#if defined( _WIN32 )
+#if defined( _WIN32 ) && USE_DX12
 	idCVar r_graphicsAPI( "r_graphicsAPI", "dx12", CVAR_RENDERER | CVAR_INIT | CVAR_ARCHIVE | CVAR_NEW, "Specifies the graphics api to use (dx12, vulkan)" );
 #else
 	idCVar r_graphicsAPI( "r_graphicsAPI", "vulkan", CVAR_RENDERER | CVAR_ROM | CVAR_STATIC | CVAR_NEW, "Specifies the graphics api to use (vulkan)" );

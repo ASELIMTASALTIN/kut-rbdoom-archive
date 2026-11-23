@@ -56,7 +56,7 @@ option(USE_SYSTEM_RAPIDJSON
          "Use the system rapidjson instead of the bundled one" OFF)
 
 option(USE_DX12
-		"Use DirectX 12" ON)
+		"Use DirectX 12 (Kut Engine is Vulkan-based; off by default)" OFF)
 
 option(USE_VULKAN
 		"Use Vulkan" ON)
@@ -1097,7 +1097,8 @@ if(MSVC)
 		include_directories(${DirectX_INCLUDE_DIR})
 	endif()
 	
-	if(USE_DX12)
+	# Kut Engine: NVRHI backs both DX12 and Vulkan, so add it for either
+	if(USE_DX12 OR USE_VULKAN)
 		list(APPEND RBDOOM3_INCLUDES ${RENDERER_NVRHI_INCLUDES})
 		list(APPEND RBDOOM3_SOURCES ${RENDERER_NVRHI_SOURCES})
 	endif()

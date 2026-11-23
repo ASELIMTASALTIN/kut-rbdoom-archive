@@ -8,7 +8,8 @@ The goal is to extend this base with large-world rendering techniques such as vi
 unique-texel workflows, baked lighting and adaptive resolution, while keeping RBDOOM-3-BFG's
 modern foundation: DX12/Vulkan through NVRHI, PBR shading, baked GI and TrenchBroom support.
 
-> Status: early. The code currently matches upstream RBDOOM-3-BFG.
+> Status: early. Kut Engine is **Vulkan-only**: DX12 is off by default and `r_graphicsAPI` is
+> locked to `vulkan`. Otherwise the code still matches upstream RBDOOM-3-BFG.
 
 ## Roadmap
 
@@ -22,6 +23,14 @@ modern foundation: DX12/Vulkan through NVRHI, PBR shading, baked GI and TrenchBr
 
 Kut Engine builds the same way as RBDOOM-3-BFG for now. See
 [README-RBDOOM.md](README-RBDOOM.md) for Windows, Linux and macOS instructions.
+
+Windows quick start (needs Visual Studio 2022, CMake, the Vulkan SDK, and
+[ISPC](https://github.com/ispc/ispc/releases) unpacked to `tools/ispc/bin/ispc.exe`):
+
+```
+cmake -S neo -B build -G "Visual Studio 17 2022" -A x64 -DFFMPEG=ON -DBINKDEC=OFF
+cmake --build build --config Release --parallel
+```
 
 Get the source with submodules:
 
