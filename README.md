@@ -1,4 +1,8 @@
-# Kut Engine
+# Kut Engine (RBDOOM-3-BFG experiment)
+
+> **Archived.** This was a short-lived Vulkan-only experiment on top of RBDOOM-3-BFG (GPLv3).
+> It is no longer developed. Kut Engine has moved to an original, independently written codebase
+> that shares no code with this repository.
 
 Kut Engine is an open-source 3D game engine. It builds on
 [RBDOOM-3-BFG](https://github.com/RobertBeckebans/RBDOOM-3-BFG), which is derived from the
