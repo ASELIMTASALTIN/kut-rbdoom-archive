@@ -6,7 +6,7 @@ id Tech 4 source code (DOOM 3 BFG Edition GPL release).
 
 The goal is to extend this base with large-world rendering techniques such as virtual texturing,
 unique-texel workflows, baked lighting and adaptive resolution, while keeping RBDOOM-3-BFG's
-modern foundation: DX12/Vulkan through NVRHI, PBR shading, baked GI and TrenchBroom support.
+modern foundation: Vulkan through NVRHI, PBR shading, baked GI and TrenchBroom support.
 
 > Status: early. Kut Engine is **Vulkan-only**: DX12 is off by default and `r_graphicsAPI` is
 > locked to `vulkan`. Otherwise the code still matches upstream RBDOOM-3-BFG.
